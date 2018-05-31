@@ -1,0 +1,92 @@
+如需叫用 Just-In-Time (JIT) 偵錯的詳細資料，
+請參閱本訊息結尾處 (而非這個對話方塊) 的資訊。
+
+************** 例外狀況文字 **************
+System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 AutomaticOperation.Form1.VendorC2B(Int32 items) 於 c:\Users\p10303150\Desktop\STAR_C\程式\AutomaticOperation_var2.0\AutomaticOperation\Form1.cs: 行 220
+   於 AutomaticOperation.Form1.VendorC2B(Int32 items) 於 c:\Users\p10303150\Desktop\STAR_C\程式\AutomaticOperation_var2.0\AutomaticOperation\Form1.cs: 行 218
+   於 AutomaticOperation.Form1.Customize() 於 c:\Users\p10303150\Desktop\STAR_C\程式\AutomaticOperation_var2.0\AutomaticOperation\Form1.cs: 行 162
+   於 AutomaticOperation.Form1.button1_Click(Object sender, EventArgs e) 於 c:\Users\p10303150\Desktop\STAR_C\程式\AutomaticOperation_var2.0\AutomaticOperation\Form1.cs: 行 122
+   於 System.Windows.Forms.Control.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   於 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   於 System.Windows.Forms.Button.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+
+************** 已載入的組件 **************
+mscorlib
+    組件版本: 4.0.0.0
+    Win32 版本: 4.7.2563.0 built by: NET471REL1
+    程式碼庫: file:///C:/Windows/Microsoft.NET/Framework64/v4.0.30319/mscorlib.dll
+----------------------------------------
+AutomaticOperation
+    組件版本: 1.0.0.0
+    Win32 版本: 1.0.0.0
+    程式碼庫: file:///C:/Users/p10303150/Desktop/STAR_C/%E7%A8%8B%E5%BC%8F/AutomaticOperation_var2.0/AutomaticOperation/bin/Debug/AutomaticOperation.exe
+----------------------------------------
+System.Windows.Forms
+    組件版本: 4.0.0.0
+    Win32 版本: 4.7.2558.0 built by: NET471REL1
+    程式碼庫: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/System.Windows.Forms/v4.0_4.0.0.0__b77a5c561934e089/System.Windows.Forms.dll
+----------------------------------------
+System
+    組件版本: 4.0.0.0
+    Win32 版本: 4.7.2558.0 built by: NET471REL1
+    程式碼庫: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/System/v4.0_4.0.0.0__b77a5c561934e089/System.dll
+----------------------------------------
+System.Drawing
+    組件版本: 4.0.0.0
+    Win32 版本: 4.7.2558.0 built by: NET471REL1
+    程式碼庫: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/System.Drawing/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Drawing.dll
+----------------------------------------
+System.Configuration
+    組件版本: 4.0.0.0
+    Win32 版本: 4.7.2558.0 built by: NET471REL1
+    程式碼庫: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/System.Configuration/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Configuration.dll
+----------------------------------------
+System.Core
+    組件版本: 4.0.0.0
+    Win32 版本: 4.7.2563.0 built by: NET471REL1
+    程式碼庫: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/System.Core/v4.0_4.0.0.0__b77a5c561934e089/System.Core.dll
+----------------------------------------
+System.Xml
+    組件版本: 4.0.0.0
+    Win32 版本: 4.7.2612.0 built by: NET471REL1LAST_B
+    程式碼庫: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/System.Xml/v4.0_4.0.0.0__b77a5c561934e089/System.Xml.dll
+----------------------------------------
+mscorlib.resources
+    組件版本: 4.0.0.0
+    Win32 版本: 4.6.1586.0 built by: NETFXREL2
+    程式碼庫: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/mscorlib.resources/v4.0_4.0.0.0_zh-Hant_b77a5c561934e089/mscorlib.resources.dll
+----------------------------------------
+Microsoft.mshtml
+    組件版本: 7.0.3300.0
+    Win32 版本: 7.0.3300.0
+    程式碼庫: file:///C:/Windows/assembly/GAC/Microsoft.mshtml/7.0.3300.0__b03f5f7f11d50a3a/Microsoft.mshtml.dll
+----------------------------------------
+System.Windows.Forms.resources
+    組件版本: 4.0.0.0
+    Win32 版本: 4.6.1586.0 built by: NETFXREL2
+    程式碼庫: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/System.Windows.Forms.resources/v4.0_4.0.0.0_zh-Hant_b77a5c561934e089/System.Windows.Forms.resources.dll
+----------------------------------------
+
+************** JIT 偵錯 **************
+若要啟用 Just-In-Time (JIT) 偵錯功能，則必須在
+此應用程式或電腦的 .config 檔案中，設定
+system.windows.forms 區段內的 jitDebugging 值。
+且該應用程式也必須在啟用偵錯的狀態下進行
+編譯。
+
+例如:
+
+<configuration>
+    <system.windows.forms jitDebugging="true" />
+</configuration>
+
+當 JIT 偵錯功能啟用後，會將所有未處理的例外狀況
+傳送給電腦上已註冊的 JIT 偵錯工具進行處
+理，而不是使用這個對話方塊來處理。
